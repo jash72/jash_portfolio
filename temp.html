@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Download PDF File" onclick="DownloadFile('Sample.pdf')" />
+    <script type="text/javascript">
+        function DownloadFile(fileName) {
+            //Set the File URL.
+            var url = "https://www.overleaf.com/download/project/663ddb63febaac03d24e81bb/build/1910c04574b-c1ab7855880282cc/output/output.pdf?compileGroup=standard&clsiserverid=clsi-pre-emp-n2d-b-f-l6vv&enable_pdf_caching=true&popupDownload=truehttps://www.overleaf.com/download/project/663ddb63febaac03d24e81bb/build/1910c04574b-c1ab7855880282cc/output/output.pdf?compileGroup=standard&clsiserverid=clsi-pre-emp-n2d-b-f-l6vv&enable_pdf_caching=true&popupDownload=true" + fileName;
+ 
+            //Create XMLHTTP Request.
+            var req = new XMLHttpRequest();
+            req.open("GET", url, true);
+            req.responseType = "blob";
+            req.onload = function () {
+                //Convert the Byte Data to BLOB object.
+                var blob = new Blob([req.response], { type: "application/octetstream" });
+ 
+                //Check the Browser type and download the File.
+                var isIE = false || !!document.documentMode;
+                if (isIE) {
+                    window.navigator.msSaveBlob(blob, fileName);
+                } else {
+                    var url = window.URL || window.webkitURL;
+                    link = url.createObjectURL(blob);
+                    var a = document.createElement("a");
+                    a.setAttribute("download", fileName);
+                    a.setAttribute("href", link);
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                }
+            };
+            req.send();
+        };
+    </script>
+</body>
+    
+</body>
+</html>
