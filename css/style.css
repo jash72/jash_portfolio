@@ -1,21 +1,3 @@
-/*----------------------------------------------------
-@File: Default Styles
-@Author: SPONDON IT
-
-This file contains the styling for the actual theme, this
-is the file you need to edit to change the look of the
-theme.
----------------------------------------------------- */
-/*=====================================================================
-@Template Name: HostHub Construction 
-@Developed By: Naim Lasker
-Author E-mail: naimlasker@gmail.com
-
-=====================================================================*/
-/*----------------------------------------------------*/
-/*font Variables*/
-/*Color Variables*/
-/*=================== fonts ====================*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500|Rubik:500,700");
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
@@ -84,22 +66,22 @@ button:focus {
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 .section_gap {
-  padding: 200px 0; }
+  padding: 100px 0; }
   @media (max-width: 1199px) {
     .section_gap {
-      padding: 80px 0; } }
+      padding: 60px 0; } }
 
 .section_gap_top {
-  padding-top: 200px; }
+  padding-top: 100px; }
   @media (max-width: 1199px) {
     .section_gap_top {
-      padding-top: 80px; } }
+      padding-top: 60px; } }
 
 .section_gap_bottom {
-  padding-bottom: 200px; }
+  padding-bottom: 100px; }
   @media (max-width: 1199px) {
     .section_gap_bottom {
-      padding-bottom: 80px; } }
+      padding-bottom: 60px; } }
 
 /* Main Title Area css
 ============================================================================================ */
@@ -2510,7 +2492,8 @@ h6 {
   -webkit-transition: all 0.4s ease 0s;
   -moz-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s; }
+  transition: all 0.4s ease 0s; 
+  box-shadow: 0px 8px 30px rgba(118, 85, 225, 0.15)}
   @media only screen and (max-width: 767px) {
     .single-brand-item {
       height: 100px;
@@ -2522,7 +2505,7 @@ h6 {
   .single-brand-item .d-table-cell {
     vertical-align: middle; }
   .single-brand-item img {
-    max-width: 80px;
+    max-width: 70px;
     margin: 0 auto;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
@@ -2532,8 +2515,7 @@ h6 {
       .single-brand-item img {
         max-width: 100px; } }
   .single-brand-item:hover {
-    border: 1px solid transparent;
-    box-shadow: 0px 8px 30px rgba(118, 85, 225, 0.15); }
+    border: 1px solid transparent; }
     .single-brand-item:hover img {
       filter: brightness(0%);
       -o-filter: brightness(0%);
@@ -3007,7 +2989,7 @@ h6 {
   /* Footer Area css
   ============================================================================================ */
   .footer_area {
-    padding-top: 80px !important;
+    padding-top: 0%;
     padding-bottom: 80px !important;
     background-image: none !important;
     background-color: #fcf8ff; }
@@ -3034,8 +3016,6 @@ h6 {
   ============================================================================================ */
   /* Contact Page Area css
   ============================================================================================ */
-  .contact_info {
-    margin-bottom: 50px; }
 
   /* End Contact page Area css
   ============================================================================================ */
@@ -3159,10 +3139,10 @@ h6 {
   /* End Home Banner Area css
   ============================================================================================ */
   .section_gap {
-    padding-top: 70px;
-    padding-bottom: 70px; }
+    padding-top: 0%;
+    padding-bottom: 0%; }
 
-  .main_title h2 {
+  .main_title h2 {   
     font-size: 25px; }
 
   /*Recent Update Area css
@@ -3259,7 +3239,7 @@ h6 {
   .footer_area:before {
     content: '';
     position: absolute;
-    top: -200px;
+    top: 0px;
     left: 0px;
     right: 0px;
     bottom: 0px;
